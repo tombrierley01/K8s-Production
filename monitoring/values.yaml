@@ -1,0 +1,23 @@
+grafana:
+  enabled: true
+  adminUser: admin
+  adminPassword: changeme
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - grafana.brierley.solutions
+    tls:
+      - hosts:
+          - grafana.brierley.solutions
+        secretName: grafana-tls
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelector: {}
+    podMonitorSelector: {}
+    maximumStartupDurationSeconds: 300
+
