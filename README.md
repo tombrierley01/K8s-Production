@@ -243,3 +243,22 @@ kubectl apply -f manifests/app/
 **Confirm Certificate:**
 
 kubectl describe certificate nodejs-app-tls
+
+## 📸 Screenshots
+
+Here are some screenshots of the Kubernetes production setup in action:
+
+### 🔧 EKS Cluster
+![EKS](screenshots/EKS.png)
+
+### 🌐 Route53 Configuration
+![Route53](screenshots/Route53.png)
+
+### 📦 App Running
+![App](screenshots/App.png)
+
+### 📊 Monitoring with Grafana
+![Monitoring](screenshots/Monitoring.png)
+
+### 🔍 ELK Stack for Logging
+![ELK](screenshots/ELK.png)
